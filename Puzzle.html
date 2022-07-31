@@ -1,0 +1,98 @@
+<html>
+<head>
+<link rel="stylesheet" href="Ailing/Puzzile.css">
+<head>
+<body id="Void" onload="CreateP();CreateC()">
+
+<div id="puzzle" style="position:absolute; top:80px; left:510px"></div>
+<div id="choice" style="position:absolute; top:80px; left:50px"></div>
+
+<script>
+	var a = 4;
+	var b = 4;
+	var ab = a*b;
+	var a2 = 6;
+	var b2 = 3;
+	var pi = 0;
+	var t = 1;
+	function CreateP() {
+		var c = 0;
+			field = "<table border=1>";
+			for (i=1;i<=a;i++){
+				field += "<tr>";
+				for (j=1;j<=b;j++){
+				c++;
+				field += "<td><input type=button class='CellCalm' value='0' id='cell"+c+"' style='height:120; width:120' onclick='Slash(this.id)';>";
+				field += "</td>";
+				}
+				field += "</tr>";
+			}
+			field += "</table>";
+		document.getElementById('puzzle').innerHTML=field;
+	}
+	function CreateC() {
+		var c = ab+1;
+			field = "<div>";
+			for (i=1;i<=ab;i++){
+				c += -1;
+				field += "<input type=button class='CellCalm' value='"+c+"' id='cellc"+c+"' style='height:80; width:80; background-image: url(\"Miga/Puzle/"+t+"Pok"+c+".png\"); background-size:cover' onclick='Chose(this.id)';>";
+			if (c!=5&c!=9&c!=13&c!=17&c!=21) {} else{field += "<br><p></p>"}
+		}
+			field += "</div>";
+		document.getElementById('choice').innerHTML=field;
+		}
+	function Chose(id) {
+		var h = document.getElementById(id).value;
+		pi = h;
+	}
+	function Slash(id) {
+		var di0 = document.getElementById(id).value;
+		if (di0==0) {
+			if (pi>0) {
+			document.getElementById(id).style.backgroundImage = "url(Miga/Puzle/"+t+"Pok"+pi+".png)";
+			document.getElementById(id).style.backgroundSize = "cover";
+			document.getElementById(id).value = pi;
+			var di = document.getElementById(id).value;
+			document.getElementById("cellc"+di).style.backgroundImage = "";
+			document.getElementById("cellc"+di).style.backgroundSize = "cover";
+			document.getElementById("cellc"+di).value = 0;
+			pi = 0;
+			Wictory();
+		}}else{
+		document.getElementById("cellc"+di0).style.backgroundImage = "url(Miga/Puzle/"+t+"Pok"+di0+".png)";
+		document.getElementById("cellc"+di0).style.backgroundSize = "cover";
+		document.getElementById("cellc"+di0).value = di0;
+		document.getElementById(id).style.backgroundImage = "";
+		document.getElementById(id).style.backgroundSize = "cover";
+		document.getElementById(id).value = 0;
+		}}
+	function Wictory() {
+		if (ab==16) {
+			var c1 = document.getElementById("cell"+1).value;
+			var c2 = document.getElementById("cell"+2).value;
+			var c3 = document.getElementById("cell"+3).value;
+			var c4 = document.getElementById("cell"+4).value;
+			var c5 = document.getElementById("cell"+5).value;
+			var c6 = document.getElementById("cell"+6).value;
+			var c7 = document.getElementById("cell"+7).value;
+			var c8 = document.getElementById("cell"+8).value;
+			var c9 = document.getElementById("cell"+9).value;
+			var c10 = document.getElementById("cell"+10).value;
+			var c11 = document.getElementById("cell"+11).value;
+			var c12 = document.getElementById("cell"+12).value;
+			var c13 = document.getElementById("cell"+13).value;
+			var c14 = document.getElementById("cell"+14).value;
+			var c15 = document.getElementById("cell"+15).value;
+			var c16 = document.getElementById("cell"+16).value;
+			if (c1==1&c2==2&c3==3&c4==4&c5==5&c6==6&c7==7&c8==8&c9==9&c10==10&c11==11&c12==12&c13==13&c14==14&c15==15&c16==16) {
+			field = "<div style='width:580; height:480; background-size:cover; position:absolute; left:-80px ; background-image:url(\"Miga/Puzle/"+t+"PokW.png\")'><input type=button class='CellCalm' style='width:580; height:480;' onclick='New()'></div>";
+			document.getElementById('puzzle').innerHTML=field;
+		}}}
+	function New() {
+	t = 2;
+	CreateP();
+	CreateC();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.place {
+	position: absolute;
+	left: 510px;
+	top: 125px;
+}
+.uncarved {
+	background-image: url("../Miga/Pixel/WoodDot.png");
+	border-color:transparent;
+	color:transparent;
+	outline:none;
+}
+.carved {
+	background-image: url("../Miga/Pixel/WoodCar.png");
+	border-color:transparent;
+	color:transparent;
+	outline:none;
+}
+.invisible {
+	color: transparent;
+	background-color: transparent;
+	border-color: transparent;
+	outline: none;
+}
+.plated {
+	background-image: url("../Miga/WoodPlate5.png");
+	background-size: cover;
+	position: absolute;
+	left: 440px;
+	top: 51px;
+	height: 580px;
+	width: 440;
+}

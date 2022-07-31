@@ -1,0 +1,62 @@
+.CellCalm {
+	height:80px;
+	width:80px;
+	color:transparent;
+	background-color:transparent;
+	border-color:transparent;
+	outline: none;
+}
+.CellCircle1 {
+	height:80px;
+	width:80px;
+	background-image: url("../Miga/Ticim/1Circle.png");
+	color:transparent;
+	background-color:transparent;
+	border-color:transparent;
+	outline: none;
+}
+.CellCircle2 {
+	height:80px;
+	width:80px;
+	background-image: url("../Miga/Ticim/2Circle.png");
+	color:transparent;
+	background-color:transparent;
+	border-color:transparent;
+	outline: none;
+}
+.Cell2Circle2 {
+	height:80px;
+	width:80px;
+	background-image: url("../Miga/Ticim/2Circle2.png");
+	color:transparent;
+	background-color:transparent;
+	border-color:transparent;
+	outline: none;
+}
+.CellX1 {
+	height:80px;
+	width:80px;
+	background-image: url("../Miga/Ticim/1AnEx.png");
+	color:transparent;
+	background-color:transparent;
+	border-color:transparent;
+	outline: none;
+}
+.CellX2 {
+	height:80px;
+	width:80px;
+	background-image: url("../Miga/Ticim/2AnEx.png");
+	color:transparent;
+	background-color:transparent;
+	border-color:transparent;
+	outline: none;
+}
+.Cell2X2 {
+	height:80px;
+	width:80px;
+	background-image: url("../Miga/Ticim/2AnEx2.png");
+	color:transparent;
+	background-color:transparent;
+	border-color:transparent;
+	outline: none;
+}

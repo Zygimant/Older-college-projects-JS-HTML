@@ -1,0 +1,717 @@
+<html>
+<head>
+<link rel="stylesheet" href="Ailing/Tictyle.css">
+<link rel="icon" type="image" href="Miga/Ticim/AnEx.png">
+<title>TicTasNo</title>
+</head>
+<body onload="Making()">
+
+<div id="nova"><div id="field0" style="position:absolute; left:530px; top:200px;"></div></div>
+
+<script>
+var c = 0;
+var s = 0;
+var g = 0;
+var p = 1;
+var t = 1;
+var d = "O"
+	function Making() {
+		var a = 3;
+		var b = 3;
+		var body = document.getElementsByTagName("body");
+		body[0].style = "background-image: url('Miga/Space/"+t+"Space"+p+".png'); background-size: cover;";
+		if (a>0 & b>0){
+			field = "<table id='grad"+g+"' style='opacity:0.8; background-image: url(\"Miga/Ticim/"+t+"SGrid"+d+".png\");'>";
+			for (i=1;i<=a;i++){
+				field += "<tr>";
+				for (j=1;j<=b;j++){
+				c++;
+				field += "<td style='height:80; width:80'><input type=button value='0' class='CellCalm'; id='cell"+c+"'; onclick='Slash(this.id)';>";
+				field += "</td>";
+				}
+				field += "</tr>";
+			}
+			field += "</table>";
+		}
+		document.getElementById('field'+g).innerHTML=field;
+		if (p>14) {
+		BackFireLv3();
+		}
+	}
+	function Slash (id) {
+		var s = document.getElementById(id).value;
+		if (s==0) {
+		document.getElementById(id).className = "CellCircle"+t+"";
+		document.getElementById(id).value = 1;
+		BlueCh();
+		}
+	}
+	function BackFire() {
+		var r = Math.floor(Math.random() * 9)+1+g;
+		var s = document.getElementById("cell"+r).value;
+		if (s==0) {
+		document.getElementById("cell"+r).className = "CellX"+t+"";
+		document.getElementById("cell"+r).value = 2;
+		RedCh();
+		} else { BackFire(); }
+	}
+	function BlueCh() {
+		var c1 = document.getElementById("cell"+(1+g)).value;
+		var c2 = document.getElementById("cell"+(2+g)).value;
+		var c3 = document.getElementById("cell"+(3+g)).value;
+		var c4 = document.getElementById("cell"+(4+g)).value;
+		var c5 = document.getElementById("cell"+(5+g)).value;
+		var c6 = document.getElementById("cell"+(6+g)).value;
+		var c7 = document.getElementById("cell"+(7+g)).value;
+		var c8 = document.getElementById("cell"+(8+g)).value;
+		var c9 = document.getElementById("cell"+(9+g)).value;
+		if (c1==1&c2==1&c3==1) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/"+t+"GridBW1.png');";
+			p += 1;
+			AllNew();
+		}else{
+		if (c4==1&c5==1&c6==1) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/"+t+"GridBW2.png');";
+			p += 1;
+			AllNew();
+		}else{
+		if (c7==1&c8==1&c9==1) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/"+t+"GridBW3.png');";
+			p += 1;
+			AllNew();
+		}else{
+		if (c1==1&c4==1&c7==1) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/"+t+"GridBW4.png');";
+			p += 1;
+			AllNew();
+		}else{
+		if (c2==1&c5==1&c8==1) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/"+t+"GridBW5.png');";
+			p += 1;
+			AllNew();
+		}else{
+		if (c3==1&c6==1&c9==1) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/"+t+"GridBW6.png');";
+			p += 1;
+			AllNew();
+		}else{
+		if (c1==1&c5==1&c9==1) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/"+t+"GridBW7.png');";
+			p += 1;
+			AllNew();
+		}else{
+		if (c3==1&c5==1&c7==1) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/"+t+"GridBW8.png');";
+			p += 1;
+			AllNew();
+		}else{
+		if (c1>0&c2>0&c3>0&c4>0&c5>0&c6>0&c7>0&c8>0&c9>0) {
+			AllNew();
+		}else{
+		if (p<6) {
+			BackFire();
+		}else{
+		if (p>5&p<11) {
+			BackFireLv2();
+		}else{
+		if (p>10) {
+			BackFireLv3();
+		}}}}}}}}}}}}}
+	function RedCh() {
+		var c1 = document.getElementById("cell"+(1+g)).value;
+		var c2 = document.getElementById("cell"+(2+g)).value;
+		var c3 = document.getElementById("cell"+(3+g)).value;
+		var c4 = document.getElementById("cell"+(4+g)).value;
+		var c5 = document.getElementById("cell"+(5+g)).value;
+		var c6 = document.getElementById("cell"+(6+g)).value;
+		var c7 = document.getElementById("cell"+(7+g)).value;
+		var c8 = document.getElementById("cell"+(8+g)).value;
+		var c9 = document.getElementById("cell"+(9+g)).value;
+		if (c1==2&c2==2&c3==2) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/GridRW1.png');";
+			p += -1;
+			if (p<1) {p = 1}
+			AllNew();
+		}else{
+		if (c4==2&c5==2&c6==2) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/GridRW2.png');";
+			p += -1;
+			if (p<1) {p = 1}
+			AllNew();
+		}else{
+		if (c7==2&c8==2&c9==2) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/GridRW3.png');";
+			p += -1;
+			if (p<1) {p = 1}
+			AllNew();
+		}else{
+		if (c1==2&c4==2&c7==2) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/GridRW4.png');";
+			p += -1;
+			if (p<1) {p = 1}
+			AllNew();
+		}else{
+		if (c2==2&c5==2&c8==2) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/GridRW5.png');";
+			p += -1;
+			if (p<1) {p = 1}
+			AllNew();
+		}else{
+		if (c3==2&c6==2&c9==2) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/GridRW6.png');";
+			p += -1;
+			if (p<1) {p = 1}
+			AllNew();
+		}else{
+		if (c1==2&c5==2&c9==2) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/GridRW7.png');";
+			p += -1;
+			if (p<1) {p = 1}
+			AllNew();
+		}else{
+		if (c3==2&c5==2&c7==2) {
+			document.getElementById("grad"+g).style = "opacity:0.7; background-image:url('Miga/Ticim/GridRW8.png');";
+			p += -1;
+			if (p<1) {p = 1}
+			AllNew();
+		}else{
+		if (c1>0&c2>0&c3>0&c4>0&c5>0&c6>0&c7>0&c8>0&c9>0) {
+			AllNew();
+		}}}}}}}}}
+		}
+	function AllNew() {
+		var l = Math.floor(Math.random() * 1000)+40;
+		var t = Math.floor(Math.random() * 370)+40;
+		document.getElementById("cell"+(1+g)).value = 3;
+		document.getElementById("cell"+(2+g)).value = 3;
+		document.getElementById("cell"+(3+g)).value = 3;
+		document.getElementById("cell"+(4+g)).value = 3;
+		document.getElementById("cell"+(5+g)).value = 3;
+		document.getElementById("cell"+(6+g)).value = 3;
+		document.getElementById("cell"+(7+g)).value = 3;
+		document.getElementById("cell"+(8+g)).value = 3;
+		document.getElementById("cell"+(9+g)).value = 3;
+		g += 9;
+		newon = "<div id='field"+g+"' style='position:absolute; left:"+l+"px; top:"+t+"px;'></div>"
+		document.getElementById('nova').innerHTML += newon;
+		Making();
+		if (g==9) {
+			document.getElementById("grad"+(g-9)).style.opacity = "0.6";
+		}else{
+		if (g==18) {
+			document.getElementById("grad"+(g-9)).style.opacity = "0.6";
+			document.getElementById("grad"+(g-18)).style.opacity = "0.53";
+		}else{
+		if (g==27) {
+			document.getElementById("grad"+(g-9)).style.opacity = "0.6";
+			document.getElementById("grad"+(g-18)).style.opacity = "0.53";
+			document.getElementById("grad"+(g-27)).style.opacity = "0.46";
+		}else{
+		if (g==36) {
+			document.getElementById("grad"+(g-9)).style.opacity = "0.6";
+			document.getElementById("grad"+(g-18)).style.opacity = "0.53";
+			document.getElementById("grad"+(g-27)).style.opacity = "0.46";
+			document.getElementById("grad"+(g-36)).style.opacity = "0.4";
+		}else{
+		if (g==45) {
+			document.getElementById("grad"+(g-9)).style.opacity = "0.6";
+			document.getElementById("grad"+(g-18)).style.opacity = "0.53";
+			document.getElementById("grad"+(g-27)).style.opacity = "0.46";
+			document.getElementById("grad"+(g-36)).style.opacity = "0.4";
+			document.getElementById("grad"+(g-45)).style.opacity = "0.33";
+		}else{
+		if (g==54) {
+			document.getElementById("grad"+(g-9)).style.opacity = "0.6";
+			document.getElementById("grad"+(g-18)).style.opacity = "0.53";
+			document.getElementById("grad"+(g-27)).style.opacity = "0.46";
+			document.getElementById("grad"+(g-36)).style.opacity = "0.4";
+			document.getElementById("grad"+(g-45)).style.opacity = "0.33";
+			document.getElementById("grad"+(g-54)).style.opacity = "0.26";
+		}else{
+			document.getElementById("grad"+(g-9)).style.opacity = "0.55";
+			document.getElementById("grad"+(g-18)).style.opacity = "0.48";
+			document.getElementById("grad"+(g-27)).style.opacity = "0.42";
+			document.getElementById("grad"+(g-36)).style.opacity = "0.3";
+			document.getElementById("grad"+(g-45)).style.opacity = "0.28";
+			document.getElementById("grad"+(g-54)).style.opacity = "0.22";
+			document.getElementById("grad"+(g-63)).style.opacity = "0.16";
+		}}}}}}
+	}
+	function BackFireLv2() {
+		var c1 = document.getElementById("cell"+(1+g)).value;
+		var c2 = document.getElementById("cell"+(2+g)).value;
+		var c3 = document.getElementById("cell"+(3+g)).value;
+		var c4 = document.getElementById("cell"+(4+g)).value;
+		var c5 = document.getElementById("cell"+(5+g)).value;
+		var c6 = document.getElementById("cell"+(6+g)).value;
+		var c7 = document.getElementById("cell"+(7+g)).value;
+		var c8 = document.getElementById("cell"+(8+g)).value;
+		var c9 = document.getElementById("cell"+(9+g)).value;
+		var r = Math.floor(Math.random() * 8)+1+g;
+		var s = document.getElementById("cell"+r).value;
+		if (c1==2&c2==2&c3==0) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c2==0&c3==2) {
+			document.getElementById("cell"+(2+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(2+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==2&c3==2) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c4==2&c5==2&c6==0) {
+			document.getElementById("cell"+(6+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(6+g)).value = 2;
+			RedCh();
+		}else{
+		if (c4==2&c5==0&c6==2) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c4==0&c5==2&c6==2) {
+			document.getElementById("cell"+(4+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(4+g)).value = 2;
+			RedCh();
+		}else{
+		if (c7==2&c8==2&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c7==2&c8==0&c9==2) {
+			document.getElementById("cell"+(8+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(8+g)).value = 2;
+			RedCh();
+		}else{
+		if (c7==0&c8==2&c9==2) {
+			document.getElementById("cell"+(7+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(7+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c4==2&c7==2) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c4==0&c7==2) {
+			document.getElementById("cell"+(4+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(4+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c4==2&c7==0) {
+			document.getElementById("cell"+(7+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(7+g)).value = 2;
+			RedCh();
+		}else{
+		if (c2==0&c5==2&c8==2) {
+			document.getElementById("cell"+(2+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(2+g)).value = 2;
+			RedCh();
+		}else{
+		if (c2==2&c5==0&c8==2) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c2==2&c5==2&c8==0) {
+			document.getElementById("cell"+(8+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(8+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==0&c6==2&c9==2) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==2&c6==0&c9==2) {
+			document.getElementById("cell"+(6+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(6+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==2&c6==2&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c5==2&c9==2) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c5==0&c9==2) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c5==2&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==0&c5==2&c7==2) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==2&c5==0&c7==2) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==2&c5==2&c7==0) {
+			document.getElementById("cell"+(7+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(7+g)).value = 2;
+			RedCh();
+		}else{
+		if (s==0) {
+		document.getElementById("cell"+r).className = "CellX"+t+"";
+		document.getElementById("cell"+r).value = 2;
+		RedCh();
+		} else { BackFire(); }}}}}}}}}}}}}}}}}}}}}}}}}
+	}
+	function BackFireLv3() {
+		var c1 = document.getElementById("cell"+(1+g)).value;
+		var c2 = document.getElementById("cell"+(2+g)).value;
+		var c3 = document.getElementById("cell"+(3+g)).value;
+		var c4 = document.getElementById("cell"+(4+g)).value;
+		var c5 = document.getElementById("cell"+(5+g)).value;
+		var c6 = document.getElementById("cell"+(6+g)).value;
+		var c7 = document.getElementById("cell"+(7+g)).value;
+		var c8 = document.getElementById("cell"+(8+g)).value;
+		var c9 = document.getElementById("cell"+(9+g)).value;
+		var r = Math.floor(Math.random() * 8)+1+g;
+		var s = document.getElementById("cell"+r).value;
+		if (c1==2&c2==2&c3==0) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c2==0&c3==2) {
+			document.getElementById("cell"+(2+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(2+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==2&c3==2) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c4==2&c5==2&c6==0) {
+			document.getElementById("cell"+(6+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(6+g)).value = 2;
+			RedCh();
+		}else{
+		if (c4==2&c5==0&c6==2) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c4==0&c5==2&c6==2) {
+			document.getElementById("cell"+(4+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(4+g)).value = 2;
+			RedCh();
+		}else{
+		if (c7==2&c8==2&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c7==2&c8==0&c9==2) {
+			document.getElementById("cell"+(8+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(8+g)).value = 2;
+			RedCh();
+		}else{
+		if (c7==0&c8==2&c9==2) {
+			document.getElementById("cell"+(7+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(7+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c4==2&c7==2) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c4==0&c7==2) {
+			document.getElementById("cell"+(4+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(4+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c4==2&c7==0) {
+			document.getElementById("cell"+(7+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(7+g)).value = 2;
+			RedCh();
+		}else{
+		if (c2==0&c5==2&c8==2) {
+			document.getElementById("cell"+(2+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(2+g)).value = 2;
+			RedCh();
+		}else{
+		if (c2==2&c5==0&c8==2) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c2==2&c5==2&c8==0) {
+			document.getElementById("cell"+(8+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(8+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==0&c6==2&c9==2) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==2&c6==0&c9==2) {
+			document.getElementById("cell"+(6+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(6+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==2&c6==2&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c5==2&c9==2) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c5==0&c9==2) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c5==2&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==0&c5==2&c7==2) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==2&c5==0&c7==2) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==2&c5==2&c7==0) {
+			document.getElementById("cell"+(7+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(7+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==1&c2==1&c3==0) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==1&c2==0&c3==1) {
+			document.getElementById("cell"+(2+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(2+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==1&c3==1) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c4==1&c5==1&c6==0) {
+			document.getElementById("cell"+(6+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(6+g)).value = 2;
+			RedCh();
+		}else{
+		if (c4==1&c5==0&c6==1) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c4==0&c5==1&c6==1) {
+			document.getElementById("cell"+(4+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(4+g)).value = 2;
+			RedCh();
+		}else{
+		if (c7==1&c8==1&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c7==1&c8==0&c9==1) {
+			document.getElementById("cell"+(8+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(8+g)).value = 2;
+			RedCh();
+		}else{
+		if (c7==0&c8==1&c9==1) {
+			document.getElementById("cell"+(7+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(7+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c4==1&c7==1) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==1&c4==0&c7==1) {
+			document.getElementById("cell"+(4+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(4+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==1&c4==1&c7==0) {
+			document.getElementById("cell"+(7+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(7+g)).value = 2;
+			RedCh();
+		}else{
+		if (c2==0&c5==1&c8==1) {
+			document.getElementById("cell"+(2+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(2+g)).value = 2;
+			RedCh();
+		}else{
+		if (c2==1&c5==0&c8==1) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c2==1&c5==1&c8==0) {
+			document.getElementById("cell"+(8+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(8+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==0&c6==1&c9==1) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==1&c6==0&c9==1) {
+			document.getElementById("cell"+(6+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(6+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==1&c6==1&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c5==1&c9==1) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==1&c5==0&c9==1) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==1&c5==1&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==0&c5==1&c7==1) {
+			document.getElementById("cell"+(3+g)).className = "CellX";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==1&c5==0&c7==1) {
+			document.getElementById("cell"+(5+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(5+g)).value = 2;
+			RedCh();
+		}else{
+		if (c3==1&c5==1&c7==0) {
+			document.getElementById("cell"+(7+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(7+g)).value = 2;
+			RedCh();
+		}else{
+		if (p>17) {
+			BackFireLv4();
+		} else { BackFire(); }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+	function BackFireLv4() {
+		var c1 = document.getElementById("cell"+(1+g)).value;
+		var c2 = document.getElementById("cell"+(2+g)).value;
+		var c3 = document.getElementById("cell"+(3+g)).value;
+		var c4 = document.getElementById("cell"+(4+g)).value;
+		var c5 = document.getElementById("cell"+(5+g)).value;
+		var c6 = document.getElementById("cell"+(6+g)).value;
+		var c7 = document.getElementById("cell"+(7+g)).value;
+		var c8 = document.getElementById("cell"+(8+g)).value;
+		var c9 = document.getElementById("cell"+(9+g)).value;
+		var r = Math.floor(Math.random() * 8)+1+g;
+		var s = document.getElementById("cell"+r).value;
+		if (c1==0&c2==0&c3==0&c4==0&c5==0&c6==0&c7==0&c8==0&c9==0) {
+			document.getElementById("cell"+(7+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(7+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==0&c3==0&c4==0&c5==1&c6==0&c7==2&c8==0&c9==0) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==0&c3==0&c4==1&c5==0&c6==0&c7==2&c8==0&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==0&c3==0&c4==1&c5==0&c6==0&c7==2&c8==1&c9==2) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==0&c3==0&c4==0&c5==0&c6==0&c7==2&c8==1&c9==0) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c2==0&c3==0&c4==1&c5==0&c6==0&c7==2&c8==1&c9==0) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==0&c3==0&c4==0&c5==0&c6==0&c7==2&c8==0&c9==1) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c2==0&c3==0&c4==1&c5==0&c6==0&c7==2&c8==0&c9==1) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==1&c2==0&c3==0&c4==0&c5==0&c6==0&c7==2&c8==0&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==1&c2==0&c3==0&c4==0&c5==0&c6==0&c7==2&c8==1&c9==2) {
+			document.getElementById("cell"+(3+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(3+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==0&c3==0&c4==0&c5==0&c6==1&c7==2&c8==0&c9==0) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==1&c3==0&c4==0&c5==0&c6==0&c7==2&c8==0&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==0&c2==0&c3==1&c4==0&c5==0&c6==0&c7==2&c8==0&c9==0) {
+			document.getElementById("cell"+(1+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(1+g)).value = 2;
+			RedCh();
+		}else{
+		if (c1==2&c2==0&c3==1&c4==1&c5==0&c6==0&c7==2&c8==0&c9==0) {
+			document.getElementById("cell"+(9+g)).className = "CellX"+t+"";
+			document.getElementById("cell"+(9+g)).value = 2;
+			RedCh();
+		}}}}}}}}}}}}}}}
+</script>
+</body>
+</html>

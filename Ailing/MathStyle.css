@@ -1,0 +1,336 @@
+#MCalcu {
+	background-image: url("../Calig/5Calcu03.png");
+	background-size: cover;
+	position: absolute;
+	top: 100px;
+	left: 150px;
+}
+#MAC {
+	background-image: url("../Calig/6CalcuAC.png");
+	background-size: cover;
+	position: absolute;
+	top: 243px;
+	left: 188px;
+}
+#MDiv {
+	background-image: url("../Calig/6CalcuDi.png");
+	background-size: cover;
+	position: absolute;
+	top: 243px;
+	left: 246px;
+}
+#MTim {
+	background-image: url("../Calig/6CalcuTi.png");
+	background-size: cover;
+	position: absolute;
+	top: 242px;
+	left: 305px;
+}
+#MBac {
+	background-image: url("../Calig/6CalcuBa.png");
+	background-size: cover;
+	position: absolute;
+	top: 242px;
+	left: 362px;
+}
+#M7 {
+	background-image: url("../Calig/6Calcu7.png");
+	background-size: cover;
+	position: absolute;
+	top: 301px;
+	left: 187px;
+}
+#M8 {
+	background-image: url("../Calig/6Calcu8.png");
+	background-size: cover;
+	position: absolute;
+	top: 301px;
+	left: 246px;
+}
+#M9 {
+	background-image: url("../Calig/6Calcu9.png");
+	background-size: cover;
+	position: absolute;
+	top: 301px;
+	left: 304px;
+}
+#MEqu {
+	background-image: url("../Calig/6CalcuEq.png");
+	background-size: cover;
+	position: absolute;
+	top: 301px;
+	left: 361px;
+}
+#M4 {
+	background-image: url("../Calig/6Calcu4.png");
+	background-size: cover;
+	position: absolute;
+	top: 359px;
+	left: 187px;
+}
+#M5 {
+	background-image: url("../Calig/6Calcu5.png");
+	background-size: cover;
+	position: absolute;
+	top: 359px;
+	left: 245px;
+}
+#M6 {
+	background-image: url("../Calig/6Calcu6.png");
+	background-size: cover;
+	position: absolute;
+	top: 359px;
+	left: 303px;
+}
+#MSub {
+	background-image: url("../Calig/6CalcuSu.png");
+	background-size: cover;
+	position: absolute;
+	top: 359px;
+	left: 361px;
+}
+#M1 {
+	background-image: url("../Calig/6Calcu1.png");
+	background-size: cover;
+	position: absolute;
+	top: 417px;
+	left: 187px;
+}
+#M2 {
+	background-image: url("../Calig/6Calcu2.png");
+	background-size: cover;
+	position: absolute;
+	top: 417px;
+	left: 245px;
+}
+#M3 {
+	background-image: url("../Calig/6Calcu3.png");
+	background-size: cover;
+	position: absolute;
+	top: 417px;
+	left: 303px;
+}
+#MAdd {
+	background-image: url("../Calig/6CalcuPl.png");
+	background-size: cover;
+	position: absolute;
+	top: 417px;
+	left: 361px;
+}
+#M0 {
+	
+	background-image: url("../Calig/6Calcu0.png");
+	background-size: cover;
+	position: absolute;
+	top: 475px;
+	left: 185px;
+}
+#MDot {
+	background-image: url("../Calig/6CalcuPo.png");
+	background-size: cover;
+	position: absolute;
+	top: 475px;
+	left: 303px;
+}
+#MAC7 {
+	background-image: url("../Calig/7CalcuAC.png");
+	background-size: cover;
+	position: absolute;
+	top: 243px;
+	left: 188px;
+}
+#MDiv7 {
+	background-image: url("../Calig/7CalcuDi.png");
+	background-size: cover;
+	position: absolute;
+	top: 243px;
+	left: 246px;
+}
+#MTim7 {
+	background-image: url("../Calig/7CalcuTi.png");
+	background-size: cover;
+	position: absolute;
+	top: 242px;
+	left: 305px;
+}
+#MBac7 {
+	background-image: url("../Calig/7CalcuBa.png");
+	background-size: cover;
+	position: absolute;
+	top: 242px;
+	left: 362px;
+}
+#M77 {
+	background-image: url("../Calig/7Calcu7.png");
+	background-size: cover;
+	position: absolute;
+	top: 301px;
+	left: 187px;
+}
+#M87 {
+	background-image: url("../Calig/7Calcu8.png");
+	background-size: cover;
+	position: absolute;
+	top: 301px;
+	left: 246px;
+}
+#M97 {
+	background-image: url("../Calig/7Calcu9.png");
+	background-size: cover;
+	position: absolute;
+	top: 301px;
+	left: 304px;
+}
+#MEqu7 {
+	background-image: url("../Calig/7CalcuEq.png");
+	background-size: cover;
+	position: absolute;
+	top: 301px;
+	left: 361px;
+}
+#M47 {
+	background-image: url("../Calig/7Calcu4.png");
+	background-size: cover;
+	position: absolute;
+	top: 359px;
+	left: 187px;
+}
+#M57 {
+	background-image: url("../Calig/7Calcu5.png");
+	background-size: cover;
+	position: absolute;
+	top: 359px;
+	left: 245px;
+}
+#M67 {
+	background-image: url("../Calig/7Calcu6.png");
+	background-size: cover;
+	position: absolute;
+	top: 359px;
+	left: 303px;
+}
+#MSub7 {
+	background-image: url("../Calig/7CalcuSu.png");
+	background-size: cover;
+	position: absolute;
+	top: 359px;
+	left: 361px;
+}
+#M17 {
+	background-image: url("../Calig/7Calcu1.png");
+	background-size: cover;
+	position: absolute;
+	top: 417px;
+	left: 187px;
+}
+#M27 {
+	background-image: url("../Calig/7Calcu2.png");
+	background-size: cover;
+	position: absolute;
+	top: 417px;
+	left: 245px;
+}
+#M37 {
+	background-image: url("../Calig/7Calcu3.png");
+	background-size: cover;
+	position: absolute;
+	top: 417px;
+	left: 303px;
+}
+#MAdd7 {
+	background-image: url("../Calig/7CalcuPl.png");
+	background-size: cover;
+	position: absolute;
+	top: 417px;
+	left: 361px;
+}
+#M07 {
+	
+	background-image: url("../Calig/7Calcu0.png");
+	background-size: cover;
+	position: absolute;
+	top: 475px;
+	left: 185px;
+}
+#MDot7 {
+	background-image: url("../Calig/7CalcuPo.png");
+	background-size: cover;
+	position: absolute;
+	top: 475px;
+	left: 303px;
+}
+#Gaze {
+	text-align: left;
+	overflow: hidden;
+	position: absolute;
+	top: 166px;
+	left: 202px;
+}
+.VoidMath {
+	height: 37px;
+	width: 208;
+	color: #213300;
+	background-color: transparent;
+	border-color: transparent;
+	font-size: 31;
+	opacity: 0.6;
+}
+.Wooden {
+	height: 57px;
+	width: 57px;
+	color: transparent;
+	background-color: transparent;
+	border-color: transparent;
+	outline: none;
+}
+.Wooden0 {
+	height: 57px;
+	width: 116px;
+	color: transparent;
+	background-color: transparent;
+	border-color: transparent;
+	outline: none;
+}
+.WoodenPl {
+	height: 115px;
+	width: 57px;
+	color: transparent;
+	background-color: transparent;
+	border-color: transparent;
+	outline: none;
+}
+#WNotes {
+	background-image: url("../Miga/NoteBook3.png");
+	background-size: cover;
+	position: absolute;
+	top: 60px;
+	left: 540px;
+	height: 530px;
+	width: 700px;
+}
+.Page1 {
+	position: absolute;
+	top: 100px;
+	left: 588px;
+	height: 450px;
+	width: 270px;
+	background-color: transparent;
+	border-color: transparent;
+	outline: none;
+	font-size: 36;
+	font-family: Brush Script MT;
+	opacity: 0.5;
+}
+.Page2 {
+	position: absolute;
+	top: 100px;
+	left: 928px;
+	height: 450px;
+	width: 270px;
+	background-color: transparent;
+	border-color: transparent;
+	outline: none;
+	font-size: 36;
+	font-family: Brush Script MT;
+	opacity: 0.5;
+}

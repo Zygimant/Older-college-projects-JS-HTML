@@ -1,0 +1,117 @@
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="Ailing/MathStyle.css">
+	<link rel="icon" type="image" href="Miga/WoodComp3.png">
+</head>
+<body background="Miga/BackWood.png">
+
+		<div id="MCalcu" style="height:465px; width:305px";></div>
+	<div id="MAC" style="height:57px; width:57px"; onmousedown=id="MAC7" style="height:57px; width:57px"; onmouseup=id="MAC" style="height:57px; width:57px";><input type="button" onclick="Reset()" class="Wooden";></div>
+	<div id="MDiv" style="height:57px; width:57px"; onmousedown=id="MDiv7" style="height:57px; width:57px"; onmouseup=id="MDiv" style="height:57px; width:57px";><input type="button" onclick="Divide()" class="Wooden";></div>
+	<div id="MTim" style="height:57px; width:57px"; onmousedown=id="MTim7" style="height:57px; width:57px"; onmouseup=id="MTim" style="height:57px; width:57px";><input type="button" onclick="Times()" class="Wooden";></div>
+	<div id="MBac" style="height:57px; width:57px"; onmousedown=id="MBac7" style="height:57px; width:57px"; onmouseup=id="MBac" style="height:57px; width:57px";><input type="button" onclick="Back()" class="Wooden";></div>
+	<div id="M7" style="height:57px; width:57px"; onmousedown=id="M77" style="height:57px; width:57px"; onmouseup=id="M7" style="height:57px; width:57px";><input type="button" onclick="AddNumber(7)" class="Wooden";></div>
+	<div id="M8" style="height:57px; width:57px"; onmousedown=id="M87" style="height:57px; width:57px"; onmouseup=id="M8" style="height:57px; width:57px";><input type="button" onclick="AddNumber(8)" class="Wooden";></div>
+	<div id="M9" style="height:57px; width:57px"; onmousedown=id="M97" style="height:57px; width:57px"; onmouseup=id="M9" style="height:57px; width:57px";><input type="button" onclick="AddNumber(9)" class="Wooden";></div>
+	<div id="MEqu" style="height:57px; width:57px"; onmousedown=id="MEqu7" style="height:57px; width:57px"; onmouseup=id="MEqu" style="height:57px; width:57px";><input type="button" onclick="Equal()" class="Wooden";></div>
+	<div id="M4" style="height:57px; width:57px"; onmousedown=id="M47" style="height:57px; width:57px"; onmouseup=id="M4" style="height:57px; width:57px";><input type="button" onclick="AddNumber(4)" class="Wooden";></div>
+	<div id="M5" style="height:57px; width:57px"; onmousedown=id="M57" style="height:57px; width:57px"; onmouseup=id="M5" style="height:57px; width:57px";><input type="button" onclick="AddNumber(5)" class="Wooden";></div>
+	<div id="M6" style="height:57px; width:57px"; onmousedown=id="M67" style="height:57px; width:57px"; onmouseup=id="M6" style="height:57px; width:57px";><input type="button" onclick="AddNumber(6)" class="Wooden";></div>
+	<div id="MSub" style="height:57px; width:57px"; onmousedown=id="MSub7" style="height:57px; width:57px"; onmouseup=id="MSub" style="height:57px; width:57px";><input type="button" onclick="Minus()" class="Wooden";></div>
+	<div id="M1" style="height:57px; width:57px"; onmousedown=id="M17" style="height:57px; width:57px"; onmouseup=id="M1" style="height:57px; width:57px";><input type="button" onclick="AddNumber(1)" class="Wooden";></div>
+	<div id="M2" style="height:57px; width:57px"; onmousedown=id="M27" style="height:57px; width:57px"; onmouseup=id="M2" style="height:57px; width:57px";><input type="button" onclick="AddNumber(2)" class="Wooden";></div>
+	<div id="M3" style="height:57px; width:57px"; onmousedown=id="M37" style="height:57px; width:57px"; onmouseup=id="M3" style="height:57px; width:57px";><input type="button" onclick="AddNumber(3)" class="Wooden";></div>
+	<div id="MAdd" style="height:115px; width:57px"; onmousedown=id="MAdd7" style="height:57px; width:57px"; onmouseup=id="MAdd" style="height:57px; width:57px";><input type="button" onclick="Plus()" class="WoodenPl";></div>
+	<div id="M0" style="height:57px; width:116px"; onmousedown=id="M07" style="height:57px; width:57px"; onmouseup=id="M0" style="height:57px; width:57px";><input type="button" onclick="AddNumber(0)" class="Wooden0";></div>
+	<div id="MDot" style="height:57px; width:57px"; onmousedown=id="MDot7" style="height:57px; width:57px"; onmouseup=id="MDot" style="height:57px; width:57px";><input type="button" onclick="Point()" class="Wooden";></div>
+		<div id="Gaze" style="height:37px; width:208";><input type="text" id="Screen" readonly="readony" class="VoidMath"></div>
+		
+		<div id="WNotes"></div>
+	<textarea id="Pag1" class="Page1"></textarea>
+	<textarea id="Pag2" class="Page2"></textarea>
+	
+<script>
+	function AddNumber(num) {
+		var input_var = document.getElementById('Screen');
+		switch(num){
+			case 1:
+				input_var.value += '1';
+				break;
+			case 2:
+				input_var.value += '2';
+				break;
+			case 3:
+				input_var.value += '3';
+				break;
+			case 4:
+				input_var.value += '4';
+				break;
+			case 5:
+				input_var.value += '5';
+				break;
+			case 6:
+				input_var.value += '6';
+				break;
+			case 7:
+				input_var.value += '7';
+				break;
+			case 8:
+				input_var.value += '8';
+				break;
+			case 9:
+				input_var.value += '9';
+				break;
+			case 0:
+				input_var.value += '0';
+				break;
+		}
+	}
+	function Reset() {
+		var input_var = document.getElementById('Screen');
+			input_var.value = '';
+	}
+	function Plus() {
+		var input_var = document.getElementById('Screen');
+			input_var.value += '+';
+	}
+	function Minus() {
+		var input_var = document.getElementById('Screen');
+			input_var.value += '-';
+	}
+	function Point() {
+		var input_var = document.getElementById('Screen');
+			input_var.value += '.';
+	}
+	function Equal() {
+		var input_var = document.getElementById('Screen');
+		var input_var2 = document.getElementById('Pag1');
+			input_var2.value += input_var.value;
+			input_var2.value += '=';
+			input_var.value = eval(document.getElementById('Screen').value);
+			input_var2.value += input_var.value;
+			input_var2.value += "   ";
+	}
+	function Times() {
+		var input_var = document.getElementById('Screen');
+			input_var.value = eval(document.getElementById('Screen').value);
+			input_var.value += '*';
+	}
+	function Divide() {
+		var input_var = document.getElementById('Screen');
+			input_var.value = eval(document.getElementById('Screen').value);
+			input_var.value += '/';
+	}
+	function Back() {
+		var arrayexit = document.getElementById("Screen").value;
+
+       for (var i = 0; i < arrayexit.length; i++) 
+        {
+            var output = arrayexit.slice(0, -1);
+            document.getElementById("Screen").value = output;
+
+        }
+	}
+</script>
+</body>
+</html>
